@@ -5,8 +5,7 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
-import "./Home.css";
+import Calculator from "../components/Calculator";
 
 const Home: React.FC = () => {
   return (
@@ -17,7 +16,7 @@ const Home: React.FC = () => {
             <IonTitle size='large'>Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
+        <Calculator />
       </IonContent>
     </IonPage>
   );
