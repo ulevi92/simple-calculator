@@ -1,21 +1,19 @@
 import { IonCol, IonGrid, IonRow } from "@ionic/react";
 import BottomButtons from "./buttons/bottom/BottomButtons";
 import TopButtons from "./buttons/top/TopButtons";
+import PrimaryScreen from "./PrimaryScreen";
+import SecondaryScreen from "./SecondaryScreen";
 
 export const Calculator = () => {
   return (
     <IonGrid>
-      <IonRow style={{ height: "55vh" }}>top row</IonRow>
+      <PrimaryScreen />
 
-      <IonRow>
-        <IonCol size='12'>
-          <TopButtons />
-        </IonCol>
-      </IonRow>
+      <SecondaryScreen />
 
-      <IonRow>
-        <BottomButtons />
-      </IonRow>
+      <TopButtons />
+
+      <BottomButtons />
     </IonGrid>
   );
 };

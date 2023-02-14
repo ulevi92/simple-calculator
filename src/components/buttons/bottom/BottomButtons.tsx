@@ -1,4 +1,4 @@
-import { IonButton, IonCol } from "@ionic/react";
+import { IonButton, IonCol, IonRow } from "@ionic/react";
 import { useMemo } from "react";
 import { buttonArrangement } from "./bottomButtons.Helper";
 import { onButtonTouch } from "../generalButton.helper";
@@ -22,7 +22,7 @@ const BottomButtons = () => {
     []
   );
 
-  return <>{renderButtons}</>;
+  return <IonRow>{renderButtons}</IonRow>;
 };
 
 export default BottomButtons;
