@@ -1,12 +1,17 @@
-import { IonGrid, IonRow } from "@ionic/react";
+import { IonCol, IonGrid, IonRow } from "@ionic/react";
 import BottomButtons from "./buttons/bottom/BottomButtons";
+import TopButtons from "./buttons/top/TopButtons";
 
 export const Calculator = () => {
   return (
     <IonGrid>
-      <IonRow>top row</IonRow>
+      <IonRow style={{ height: "50vh" }}>top row</IonRow>
 
-      <IonRow>middle row</IonRow>
+      <IonRow>
+        <IonCol size='12'>
+          <TopButtons />
+        </IonCol>
+      </IonRow>
 
       <IonRow>
         <BottomButtons />

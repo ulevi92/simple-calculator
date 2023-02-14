@@ -4,23 +4,23 @@ import { buttonArrangement } from "./bottomButtons.Helper";
 import { onButtonTouch } from "../generalButton.helper";
 
 const BottomButtons = () => {
-  const renderButtons = useMemo(() => {
-    const rows = 4;
-
-    return buttonArrangement.map(({ sign, color, fill }, index) => (
-      <IonCol size='3' key={index}>
-        <IonButton
-          color={color}
-          onTouchStart={onButtonTouch}
-          expand='full'
-          shape='round'
-          fill={`${fill === "outline" ? "outline" : "solid"}`}
-        >
-          {sign}
-        </IonButton>
-      </IonCol>
-    ));
-  }, []);
+  const renderButtons = useMemo(
+    () =>
+      buttonArrangement.map(({ sign, color, fill }, index) => (
+        <IonCol size='3' key={index}>
+          <IonButton
+            color={color}
+            onTouchStart={onButtonTouch}
+            expand='full'
+            shape='round'
+            fill={`${fill === "outline" ? "outline" : "solid"}`}
+          >
+            {sign}
+          </IonButton>
+        </IonCol>
+      )),
+    []
+  );
 
   return <>{renderButtons}</>;
 };
