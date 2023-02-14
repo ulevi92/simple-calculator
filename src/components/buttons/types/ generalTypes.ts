@@ -7,4 +7,5 @@ export interface ButtonArrangement {
   color: ButtonColor;
   sign: ButtonSign;
   background?: ButtonBackground;
+  fill?: "outline";
 }

@@ -4,6 +4,7 @@ export const buttonArrangement: ButtonArrangement[] = [
   {
     sign: "c",
     color: "danger",
+    fill: "outline",
   },
 
   {
@@ -80,7 +81,7 @@ export const buttonArrangement: ButtonArrangement[] = [
   },
   {
     sign: "=",
-    color: "white",
-    background: "success",
+    color: "success",
+    fill: "outline",
   },
 ];
