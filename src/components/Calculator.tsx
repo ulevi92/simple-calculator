@@ -5,7 +5,7 @@ import TopButtons from "./buttons/top/TopButtons";
 export const Calculator = () => {
   return (
     <IonGrid>
-      <IonRow style={{ height: "50vh" }}>top row</IonRow>
+      <IonRow style={{ height: "55vh" }}>top row</IonRow>
 
       <IonRow>
         <IonCol size='12'>
