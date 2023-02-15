@@ -1,9 +1,11 @@
-import { IonCol, IonRow } from "@ionic/react";
+import { IonCol, IonRow, IonText } from "@ionic/react";
 
 const SecondaryScreen = () => {
   return (
     <IonRow style={{ height: "3vh" }}>
-      <IonCol></IonCol>
+      <IonCol>
+        <IonText>will show calculation results before entering =</IonText>
+      </IonCol>
     </IonRow>
   );
 };
