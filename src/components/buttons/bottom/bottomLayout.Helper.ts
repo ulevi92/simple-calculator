@@ -1,6 +1,6 @@
-import { ButtonArrangement } from "../types/ generalTypes";
+import { ButtonsArrangement } from "../types/ButtonTypes";
 
-export const buttonArrangement: ButtonArrangement[] = [
+export const buttonsArrangement: ButtonsArrangement[] = [
   {
     sign: "c",
     color: "danger",

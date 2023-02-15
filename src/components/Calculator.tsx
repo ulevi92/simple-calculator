@@ -1,8 +1,8 @@
-import { IonCol, IonGrid, IonRow } from "@ionic/react";
-import BottomButtons from "./buttons/bottom/BottomButtons";
-import TopButtons from "./buttons/top/TopButtons";
-import PrimaryScreen from "./PrimaryScreen";
-import SecondaryScreen from "./SecondaryScreen";
+import { IonGrid } from "@ionic/react";
+import BottomLayout from "./buttons/bottom/BottomLayout";
+import TopLayout from "./buttons/top/TopLayout";
+import PrimaryScreen from "./screens/PrimaryScreen";
+import SecondaryScreen from "./screens/SecondaryScreen";
 
 export const Calculator = () => {
   return (
@@ -11,9 +11,9 @@ export const Calculator = () => {
 
       <SecondaryScreen />
 
-      <TopButtons />
+      <TopLayout />
 
-      <BottomButtons />
+      <BottomLayout />
     </IonGrid>
   );
 };

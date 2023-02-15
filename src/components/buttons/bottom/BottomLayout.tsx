@@ -1,12 +1,12 @@
 import { IonButton, IonCol, IonRow } from "@ionic/react";
 import { useMemo } from "react";
-import { buttonArrangement } from "./bottomButtons.Helper";
+import { buttonsArrangement } from "./bottomLayout.Helper";
 import { onButtonTouch } from "../generalButton.helper";
 
-const BottomButtons = () => {
+const BottomLayout = () => {
   const renderButtons = useMemo(
     () =>
-      buttonArrangement.map(({ sign, color, fill }, index) => (
+      buttonsArrangement.map(({ sign, color, fill }, index) => (
         <IonCol size='3' key={index}>
           <IonButton
             color={color}
@@ -25,4 +25,4 @@ const BottomButtons = () => {
   return <IonRow>{renderButtons}</IonRow>;
 };
 
-export default BottomButtons;
+export default BottomLayout;
