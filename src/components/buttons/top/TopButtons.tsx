@@ -1,14 +1,9 @@
 import { IonButton, IonButtons, IonIcon } from "@ionic/react";
-import {
-  backspaceOutline,
-  backspaceSharp,
-  timeOutline,
-  timeSharp,
-} from "ionicons/icons";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { IconModifications } from "../types/ButtonTypes";
 
 interface TopButtonsProps {
+  history?: boolean;
   slot: "start" | "end";
   iconClass?: string;
   modifications: IconModifications;
@@ -18,6 +13,7 @@ interface TopButtonsProps {
 }
 
 const TopButtons: FC<TopButtonsProps> = ({
+  history,
   slot,
   iconClass,
   ios,
@@ -25,11 +21,18 @@ const TopButtons: FC<TopButtonsProps> = ({
   modifications,
   onTouch,
 }) => {
+  const [open, setOpen] = useState<boolean>(false); // will be changed with context
+
+  const onHistoryOpen = () => {
+    onTouch();
+    setOpen(true);
+  };
+
   return (
     <IonButtons slot={slot}>
       <IonButton
         fill={modifications.fill}
-        onTouchStart={onTouch}
+        onTouchStart={history ? onHistoryOpen : onTouch}
         shape={modifications.shape}
       >
         <IonIcon
